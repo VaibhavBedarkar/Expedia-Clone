@@ -38,15 +38,16 @@ let usercreds = JSON.parse(localStorage.getItem('loginUser'));
 let userEmail = document.getElementById("userEmail");
 userEmail.innerText = usercreds[0];
 
-promoBtn.addEventListener("click",()=>{
+promoBtn.addEventListener("click", ()=>{
     let promoCode = document.getElementById("promoCode").value;
 
     let disc= couponCode[promoCode];
     let newValue = (final-(final*disc)).toFixed(2);
+     console.log(newValue);
      document.getElementById("final_price").innerText="Total: ₹"+ newValue;
      alert(`${promoCode} coupon Applied Successfully!`)
 
-})
+});
 
 Paybtn.addEventListener("click", ()=>{
 
