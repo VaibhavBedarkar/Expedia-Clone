@@ -31,7 +31,7 @@ document.getElementById("hotelName").innerText= travelData[0].name;
 
 document.getElementById("tax").innerText= "Taxes and service fees: ₹" +tax;
 let final = price+tax
-document.getElementById("final_price").innerText="Total: ₹"+final;
+document.getElementById("final_price").innerText="Total: ₹"+final.toFixed(2);
 
 let usercreds = JSON.parse(localStorage.getItem('loginUser'));
 
