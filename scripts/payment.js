@@ -1,18 +1,18 @@
 let couponCode = {
-        Flat60: 0.6,
-        Flat50: 0.5,
-        Flat40: 0.4,
-        Flat30: 0.3,
-        Flat20: 0.2,
-        Flat10: 0.1
-    }
+    Flat60: 0.6,
+    Flat50: 0.5,
+    Flat40: 0.4,
+    Flat30: 0.3,
+    Flat20: 0.2,
+    Flat10: 0.1
+}
 
 let cardDetails = {
-        cardHolder: "Vaibhav Bedarkar",
-        cardNum: 123456789876,
-        exp: 1223,
-        cvv: 123
-    }
+    cardHolder: "Vaibhav Bedarkar",
+    cardNum: 123456789876,
+    exp: 1223,
+    cvv: 123
+}
 
 let travName = document.getElementById("traveller_name").value;
 let travMob = document.getElementById("traveller_mobile").value;
@@ -39,12 +39,12 @@ let userEmail = document.getElementById("userEmail");
 userEmail.innerText = usercreds[0];
 
 promoBtn.addEventListener("click",()=>{
-    let promoCode = document.getElementById("promoCode").value;
+let promoCode = document.getElementById("promoCode").value;
 
-    let disc= couponCode[promoCode];
-     final = (final-(final*disc)).toFixed(2);
-     document.getElementById("final_price").innerText="Total: ₹"+final;
-     alert(`${promoCode} coupon Applied Successfully!`)
+let disc= couponCode[promoCode];
+ final = (final-(final*disc)).toFixed(2);
+ document.getElementById("final_price").innerText="Total: ₹"+final;
+ alert(`${promoCode} coupon Applied Successfully!`)
 
 })
 
@@ -56,11 +56,11 @@ let cardExp = document.getElementById("traveller_cardExpiry").value;
 let cardCvv = document.getElementById("traveller_cvv").value;
 let travName = document.getElementById("traveller_name").value;
 
-    if (cardNo == cardDetails["cardNum"] && cardExp == cardDetails["exp"] && cardCvv == cardDetails["cvv"]) {
-       
-        alert(`Dear ${travName},\n Booking at Hotel ${travelData[0].name} placed Successfully!`);
-    } else {
-        alert("Payment Failed! Invalid Card Details");
-    }
+if (cardNo == cardDetails["cardNum"] && cardExp == cardDetails["exp"] && cardCvv == cardDetails["cvv"]) {
+   
+    alert(`Dear ${travName},\n Booking at Hotel ${travelData[0].name} placed Successfully!`);
+} else {
+    alert("Payment Failed! Invalid Card Details");
+}
 
 })
