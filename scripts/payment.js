@@ -56,8 +56,7 @@ let cardExp = document.getElementById("traveller_cardExpiry").value;
 let cardCvv = document.getElementById("traveller_cvv").value;
 let travName = document.getElementById("traveller_name").value;
 
-if (cardNo == cardDetails["cardNum"] && cardExp == cardDetails["exp"] && cardCvv == cardDetails["cvv"]) {
-   
+if (cardNo == cardDetails["cardNum"] && cardExp == cardDetails["exp"] && cardCvv == cardDetails["cvv"]) {   
     alert(`Dear ${travName},\n Booking at Hotel ${travelData[0].name} placed Successfully!`);
 } else {
     alert("Payment Failed! Invalid Card Details");
